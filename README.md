@@ -16,7 +16,8 @@ cd transcriptformer
 ```bash
 conda clean --all -y
 conda update -n base conda -y
-2. Create Conda Environment
+``` 
+### 2. Create Conda Environment
 Bashconda create -n transcriptformer python=3.11 -y
 conda activate transcriptformer
 3. Install Dependencies
