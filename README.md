@@ -8,9 +8,10 @@ Official GitHub: [https://github.com/czi-ai/transcriptformer](https://github.com
 
 ## Installation
 # Clone the repository
+```bash
 git clone https://github.com/czi-ai/transcriptformer.git
 cd transcriptformer
-
+```
 # Update Conda (Run as Administrator)
 
 ```bash
