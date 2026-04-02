@@ -71,3 +71,21 @@ Common Issues & Solutions
 "Killed" error → Use --oom-dataloader flag (highly recommended for large datasets).
 zarr version error (ImportError: zarr-python major version > 2 is not supported) → Already fixed by installing zarr<3.
 Adjust --batch-size and --n-data-workers according to your hardware.
+
+## Train and test classifier
+python classify.py
+
+## Visualize (optional)
+```python 
+import scanpy as sc
+import anndata as ad
+adata = ad.read_h5ad("./embeddings/test_with_predictions.h5ad")
+
+# Dùng embeddings từ TranscriptFormer để tính UMAP
+import numpy as np
+adata.obsm["X_tf"] = adata.obsm["embeddings"]
+sc.pp.neighbors(adata, use_rep="X_tf")
+sc.tl.umap(adata)
+
+sc.pl.umap(adata, color=["cell_type", "predicted_cell_type"], 
+           save="_brain_classification.png")
