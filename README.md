@@ -108,18 +108,23 @@ Kích thước embedding (số chiều): 2048
 --- y_train (labels) ---
 
 Các cột có trong .obs (metadata của cells):
+
 ['roi', 'disease_ontology_term_id', 'self_reported_ethnicity_ontology_term_id', 'assay_ontology_term_id', 'sex_ontology_term_id', 'development_stage_ontology_term_id', 'donor_id', 'suspension_type', 'dissection', 'fraction_mitochondrial', 'fraction_unspliced', 'cell_cycle_score', 'total_genes', 'total_UMIs', 'sample_id', 'supercluster_term', 'cluster_id', 'subcluster_id', 'cell_type_ontology_term_id', 'is_primary_data', 'tissue_type', 'tissue_ontology_term_id', 'cell_type', 'assay', 'disease', 'sex', 'tissue', 'self_reported_ethnicity', 'development_stage', 'observation_joinid', 'original_batches', 'original_batches_uuid', 'original_batches_index']
 
 Các cột label có thể dùng:
 
 ✓ Tìm thấy: 'cell_type'
+
    Số class: 11
+   
    Ví dụ 5 giá trị đầu: ['leukocyte', 'central nervous system macrophage', 'fibroblast', 'pericyte', 'vascular associated smooth muscle cell']
    
 ✗ Không có: 'celltype'
 
 ✓ Tìm thấy: 'cell_type_ontology_term_id'
+
    Số class: 11
+   
    Ví dụ 5 giá trị đầu: ['CL:0000738', 'CL:0000878', 'CL:0000057', 'CL:0000669', 'CL:0000359']
    
 ✗ Không có: 'author_cell_type'
